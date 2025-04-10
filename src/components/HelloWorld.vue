@@ -7,10 +7,11 @@ const randomStyles = ref([])
 
 onMounted(() => {
   const styles = []
+
   for (let i = 0; i < 40; i++) {
     const left = Math.random() * 100
     const top = Math.random() * 100
-    const size = Math.random() * 15 + 10
+    const size = Math.random() * 20 + 20
     const delay = Math.random() * 5
 
     styles.push({
@@ -18,11 +19,13 @@ onMounted(() => {
       top: `${top}vh`,
       width: `${size}px`,
       height: `${size}px`,
-      animationDelay: `${delay}s`
+      animationDelay: `${delay}s`,
     })
   }
+
   randomStyles.value = styles
 })
+
 
 // props รับข้อความ (ถ้าอยากเปลี่ยนได้ภายหลัง)
 defineProps({
@@ -49,8 +52,24 @@ const toggleMusic = () => {
 <template>
   <!-- หัวใจตกกระจายทั่วหน้า -->
   <div class="hearts-container">
-    <span v-for="(style, index) in randomStyles" :key="index" class="heart" :style="style" />
-  </div>
+  <svg
+    v-for="(style, index) in randomStyles"
+    :key="index"
+    class="animated-heart"
+    viewBox="0 0 24 24"
+    fill="currentColor"
+    xmlns="http://www.w3.org/2000/svg"
+    :style="style"
+  >
+    <path
+      d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 6 
+       4 4 6.5 4c1.74 0 3.41 1.01 4.13 2.44H13.4C14.1 
+       5.01 15.77 4 17.5 4 20 4 22 6 22 8.5c0 3.78-3.4 
+       6.86-8.55 11.54L12 21.35z"
+    />
+  </svg>
+</div>
+
 
   <!-- เนื้อหาหลัก -->
   <div class="container">
@@ -120,7 +139,6 @@ h1 {
 .music-btn:hover {
   background-color: #d81b60;
 }
-
 .hearts-container {
   position: fixed;
   top: 0;
@@ -128,48 +146,38 @@ h1 {
   width: 100%;
   height: 100%;
   pointer-events: none;
-  z-index: 0;
+  z-index: 999;
   overflow: hidden;
 }
 
-.heart {
+.animated-heart {
   position: absolute;
-  background-color: #ff69b4;
-  transform: rotate(45deg);
-  animation: blink 1.5s infinite ease-in-out;
-  opacity: 0.8;
-  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  color: #f472b6; /* pink-400 */
+  animation: float 6s ease-in infinite;
+  opacity: 0.85;
 }
 
-.heart::before,
-.heart::after {
-  content: '';
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background-color: #ff69b4;
-  border-radius: 50%;
-}
 
-.heart::before {
-  top: -50%;
-  left: 0;
-}
-
-.heart::after {
-  left: -50%;
-  top: 0;
-}
-
-@keyframes blink {
-
-  0%,
-  100% {
-    opacity: 0.4;
+@keyframes float {
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: 0.9;
   }
-
   50% {
+    transform: translateY(-100px) scale(1.2);
     opacity: 1;
   }
+  100% {
+    transform: translateY(-200px) scale(0.8);
+    opacity: 0;
+  }
 }
+
+.animate-float {
+  animation: float 6s ease-in infinite;
+}
+
+
 </style>
