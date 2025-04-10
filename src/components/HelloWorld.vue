@@ -73,7 +73,7 @@ const toggleMusic = () => {
 
   <!-- เนื้อหาหลัก -->
   <div class="container">
-    <h1>{{ msg || 'Happy Anniversary 💖' }}</h1>
+    <h1 class="any">Happy Anniversary 💖</h1>
 
     <!-- รูปภาพ (ถ้ามี) -->
     <!-- <img class="photo" src="/anniversary-photo.jpg" alt="ภาพคู่ของเรา" /> -->
@@ -97,87 +97,5 @@ const toggleMusic = () => {
 </template>
 
 
-<style scoped>
-.container {
-  text-align: center;
-  padding: 2rem;
-  font-family: 'Kanit', sans-serif;
-  background: linear-gradient(to bottom, #ffe0f0, #ffffff);
-  min-height: 100vh;
-}
+<style src="../assets/love.css"></style>
 
-h1 {
-  font-size: 2.5rem;
-  color: #e91e63;
-  margin-bottom: 1rem;
-}
-
-.photo {
-  width: 250px;
-  border-radius: 1rem;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
-  margin-bottom: 1rem;
-}
-
-.message {
-  font-size: 1.2rem;
-  color: #333;
-  margin-bottom: 2rem;
-}
-
-.music-btn {
-  background-color: #e91e63;
-  color: white;
-  border: none;
-  padding: 0.7rem 1.2rem;
-  border-radius: 1rem;
-  cursor: pointer;
-  font-size: 1rem;
-  transition: 0.3s;
-}
-
-.music-btn:hover {
-  background-color: #d81b60;
-}
-.hearts-container {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-  z-index: 999;
-  overflow: hidden;
-}
-
-.animated-heart {
-  position: absolute;
-  width: 24px;
-  height: 24px;
-  color: #f472b6; /* pink-400 */
-  animation: float 6s ease-in infinite;
-  opacity: 0.85;
-}
-
-
-@keyframes float {
-  0% {
-    transform: translateY(0) scale(1);
-    opacity: 0.9;
-  }
-  50% {
-    transform: translateY(-100px) scale(1.2);
-    opacity: 1;
-  }
-  100% {
-    transform: translateY(-200px) scale(0.8);
-    opacity: 0;
-  }
-}
-
-.animate-float {
-  animation: float 6s ease-in infinite;
-}
-
-
-</style>
