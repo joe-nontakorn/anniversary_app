@@ -1,100 +1,94 @@
-
-@import url('https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Arrows:wght@400..700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Anuphan:wght@100..700&family=Edu+AU+VIC+WA+NT+Arrows:wght@400..700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Arrows:wght@400..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Anuphan:wght@100..700&family=Edu+AU+VIC+WA+NT+Arrows:wght@400..700&display=swap");
 
 /* Reset default margin/padding */
-html, body {
-    margin: 0;
-    padding: 0;
-  }
-  
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
 h1.any {
-    font-family: 'Edu AU VIC WA NT Arrows', cursive;
-    font-size: 4rem;
-    color: #e70c55;
-    margin-bottom: 1rem;
-  }
-  
+  font-family: "Edu AU VIC WA NT Arrows", cursive;
+  font-size: 4rem;
+  color: #e70c55;
+  margin-bottom: 1rem;
+}
+
 .message {
-    font-family: "Anuphan", sans-serif;
-    font-optical-sizing: auto;
-    font-size: 1.5rem;
-    color: #e70c55;
-  }
+  font-family: "Anuphan", sans-serif;
+  font-optical-sizing: auto;
+  font-size: 1.5rem;
+  color: #e70c55;
+}
 
-  .container {
-    /* width: 100vw;
+.container {
+  /* width: 100vw;
     height: 100vh; */
-    background: linear-gradient(to bottom, #ffe0f0, #ffffff);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    font-family: 'Kanit', sans-serif;
-  }
-  
+  background: linear-gradient(to bottom, #ffe0f0, #ffffff);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "Kanit", sans-serif;
+}
 
-  
-  .photo {
-    width: 250px;
-    border-radius: 1rem;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
-    margin-bottom: 1rem;
+.photo {
+  width: 250px;
+  border-radius: 1rem;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  margin-bottom: 1rem;
+}
+
+.music-btn {
+  background-color: #e91e63;
+  color: white;
+  border: none;
+  padding: 0.7rem 1.2rem;
+  border-radius: 1rem;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: 0.3s;
+}
+
+.music-btn:hover {
+  background-color: #d81b60;
+}
+.hearts-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 999;
+  overflow: hidden;
+}
+
+.animated-heart {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  color: #f472b6; /* pink-400 */
+  animation: float 6s ease-in infinite;
+  opacity: 0.85;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: 0.9;
   }
-  
- 
-  
-  .music-btn {
-    background-color: #e91e63;
-    color: white;
-    border: none;
-    padding: 0.7rem 1.2rem;
-    border-radius: 1rem;
-    cursor: pointer;
-    font-size: 1rem;
-    transition: 0.3s;
+  50% {
+    transform: translateY(-100px) scale(1.2);
+    opacity: 1;
   }
-  
-  .music-btn:hover {
-    background-color: #d81b60;
+  100% {
+    transform: translateY(-200px) scale(0.8);
+    opacity: 0;
   }
-  .hearts-container {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
-    z-index: 999;
-    overflow: hidden;
-  }
-  
-  .animated-heart {
-    position: absolute;
-    width: 24px;
-    height: 24px;
-    color: #f472b6; /* pink-400 */
-    animation: float 6s ease-in infinite;
-    opacity: 0.85;
-  }
-  
-  
-  @keyframes float {
-    0% {
-      transform: translateY(0) scale(1);
-      opacity: 0.9;
-    }
-    50% {
-      transform: translateY(-100px) scale(1.2);
-      opacity: 1;
-    }
-    100% {
-      transform: translateY(-200px) scale(0.8);
-      opacity: 0;
-    }
-  }
-  
-  .animate-float {
-    animation: float 6s ease-in infinite;
-  }
-  
+}
+
+.animate-float {
+  animation: float 6s ease-in infinite;
+}

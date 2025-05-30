@@ -52,34 +52,25 @@ const toggleMusic = () => {
 <template>
   <!-- หัวใจตกกระจายทั่วหน้า -->
   <div class="hearts-container">
-  <svg
-    v-for="(style, index) in randomStyles"
-    :key="index"
-    class="animated-heart"
-    viewBox="0 0 24 24"
-    fill="currentColor"
-    xmlns="http://www.w3.org/2000/svg"
-    :style="style"
-  >
-    <path
-      d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 6 
+    <svg v-for="(style, index) in randomStyles" :key="index" class="animated-heart" viewBox="0 0 24 24"
+      fill="currentColor" xmlns="http://www.w3.org/2000/svg" :style="style">
+      <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 6 
        4 4 6.5 4c1.74 0 3.41 1.01 4.13 2.44H13.4C14.1 
        5.01 15.77 4 17.5 4 20 4 22 6 22 8.5c0 3.78-3.4 
-       6.86-8.55 11.54L12 21.35z"
-    />
-  </svg>
-</div>
+       6.86-8.55 11.54L12 21.35z" />
+    </svg>
+  </div>
 
 
   <!-- เนื้อหาหลัก -->
   <div class="container">
-    <h1 class="any">Happy Anniversary 💖</h1>
+    <h1 class="any">Happy Anniversary 3 years💖</h1>
 
     <!-- รูปภาพ (ถ้ามี) -->
     <!-- <img class="photo" src="/anniversary-photo.jpg" alt="ภาพคู่ของเรา" /> -->
 
     <p class="message">
-      ขอบคุณที่อยู่ด้วยกันมาเสมอ... รักเธอที่สุดในโลกเลย 💘
+      Thank you for always being by my side… I love you more than anything in the world. 💘
     </p>
 
     <!-- เพลง (เปิด/ปิดได้) -->🏩
@@ -90,7 +81,7 @@ const toggleMusic = () => {
     </audio>
 
     <button class="music-btn" @click="toggleMusic">
-      {{ isPlaying ? '⏸ หยุดเพลง' : '▶️ เล่นเพลง' }}
+      {{ isPlaying ? '⏸ Stop' : '▶️ Play' }}
     </button>
 
   </div>
@@ -98,4 +89,3 @@ const toggleMusic = () => {
 
 
 <style src="../assets/love.css"></style>
-
