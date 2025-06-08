@@ -92,3 +92,38 @@ h1.any {
 .animate-float {
   animation: float 6s ease-in infinite;
 }
+
+
+
+@media (max-width: 768px) {
+  .photo-grid {
+    grid-template-columns: repeat(2, 1fr); /* มือถือแสดง 2 รูปต่อแถว */
+    max-width: 90vw;
+  }
+}
+
+
+.photo-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin: 20px auto;        /* ทำให้ตารางชิดกลาง */
+  max-width: 800px;         /* ป้องกันไม่ให้กว้างเกินไป */
+  justify-items: center;    /* จัดรูปให้อยู่ตรงกลางของแต่ละคอลัมน์ */
+}
+
+
+.anniversary-photo {
+  width: 100%;
+  aspect-ratio: 1 / 1; /* ทำให้เป็นสี่เหลี่ยมจัตุรัส */
+  object-fit: cover;   /* ครอบภาพให้พอดีกับกรอบ */
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.container {
+  text-align: center;
+  padding: 20px;
+}
+
+

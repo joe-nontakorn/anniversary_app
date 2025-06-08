@@ -1,7 +1,21 @@
 <script setup>
 // import { ref } from 'vue'
-
 import { ref, onMounted } from 'vue'
+
+import protoA from '../assets/proto/72653_0.jpg'
+import protoB from '../assets/proto/72654_0.jpg'
+import protoC from '../assets/proto/72655_0.jpg'
+import protoD from '../assets/proto/72656_0.jpg'
+import protoE from '../assets/proto/72657_0.jpg'
+import protoF from '../assets/proto/72658_0.jpg'
+import protoG from '../assets/proto/72659_0.jpg'
+import protoH from '../assets/proto/72660_0.jpg'
+import protoI from '../assets/proto/72661_0.jpg'
+import protoJ from '../assets/proto/72662_0.jpg'
+
+
+
+
 
 const randomStyles = ref([])
 
@@ -76,7 +90,7 @@ const toggleMusic = () => {
     <!-- เพลง (เปิด/ปิดได้) -->🏩
 
     <audio ref="audio" loop>
-      <source src="/nai-mue-khong-chan.mp3" type="audio/mp3" />
+      <source src="/give_me_your_forever.mp3" type="audio/mp3" />
       Your browser does not support the audio element.💖
     </audio>
 
@@ -84,8 +98,29 @@ const toggleMusic = () => {
       {{ isPlaying ? '⏸ Stop' : '▶️ Play' }}
     </button>
 
+<!-- รูปภาพทั้งหมด -->
+<div class="photo-grid">
+  <img :src="protoA" alt="รูปของเรา" class="anniversary-photo" />
+  <img :src="protoB" alt="รูปของเรา" class="anniversary-photo" />
+  <img :src="protoC" alt="รูปของเรา" class="anniversary-photo" />
+  <img :src="protoD" alt="รูปของเรา" class="anniversary-photo" />
+  <img :src="protoE" alt="รูปของเรา" class="anniversary-photo" />
+  <img :src="protoF" alt="รูปของเรา" class="anniversary-photo" />
+  <img :src="protoG" alt="รูปของเรา" class="anniversary-photo" />
+  <img :src="protoH" alt="รูปของเรา" class="anniversary-photo" />
+  <img :src="protoI" alt="รูปของเรา" class="anniversary-photo" />
+  <img :src="protoJ" alt="รูปของเรา" class="anniversary-photo" />
+</div>
+
+
+
   </div>
 </template>
 
 
-<style src="../assets/love.css"></style>
+<style src="../assets/love.css">
+
+
+
+
+</style>
