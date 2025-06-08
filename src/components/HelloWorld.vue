@@ -12,6 +12,8 @@ import protoG from '../assets/proto/72659_0.jpg'
 import protoH from '../assets/proto/72660_0.jpg'
 import protoI from '../assets/proto/72661_0.jpg'
 import protoJ from '../assets/proto/72662_0.jpg'
+import protok from '../assets/proto/72669_0.jpg'
+import protol from '../assets/proto/72670_0.jpg'
 
 
 
@@ -110,6 +112,8 @@ const toggleMusic = () => {
   <img :src="protoH" alt="รูปของเรา" class="anniversary-photo" />
   <img :src="protoI" alt="รูปของเรา" class="anniversary-photo" />
   <img :src="protoJ" alt="รูปของเรา" class="anniversary-photo" />
+  <img :src="protok" alt="รูปของเรา" class="anniversary-photo" />
+  <img :src="protol" alt="รูปของเรา" class="anniversary-photo" />
 </div>
 
 
