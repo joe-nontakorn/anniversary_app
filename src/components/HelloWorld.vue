@@ -15,10 +15,6 @@ import protoJ from '../assets/proto/72662_0.jpg'
 import protok from '../assets/proto/72669_0.jpg'
 import protol from '../assets/proto/72670_0.jpg'
 
-
-
-
-
 const randomStyles = ref([])
 
 onMounted(() => {
